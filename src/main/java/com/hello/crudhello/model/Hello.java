@@ -15,7 +15,9 @@ public class Hello {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String Greeting;
+    private String greeting;
+
+    private String name;
 
 
 }

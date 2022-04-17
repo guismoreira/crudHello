@@ -1,5 +1,6 @@
 package com.hello.crudhello.control;
 
+import com.hello.crudhello.dto.HelloDTO;
 import com.hello.crudhello.model.Hello;
 import com.hello.crudhello.service.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,8 +25,8 @@ public class HelloController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Hello>> listHello(){
-        List<Hello> hello = this.helloService.findAllHello();
+    public ResponseEntity<List<HelloDTO>> listHello(){
+        List<HelloDTO> hello = this.helloService.findAllHello();
         return ResponseEntity.ok(hello);
     }
 }
