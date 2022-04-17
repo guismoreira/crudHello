@@ -20,8 +20,8 @@ public class HelloController {
     private HelloService helloService;
 
     @PostMapping
-    public ResponseEntity<Hello> saveHello(@RequestBody Hello hello){
-        return new ResponseEntity<>(this.helloService.saveHello(hello), HttpStatus.CREATED);
+    public ResponseEntity<HelloDTO> saveHello(@RequestBody HelloDTO helloDTO){
+        return new ResponseEntity<>(this.helloService.saveHello(helloDTO), HttpStatus.CREATED);
     }
 
     @GetMapping
